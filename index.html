@@ -3,177 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makertruck Initiative</title>
+    <title>Makertruck Initiative - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #00539C; /* Blue */
-            color: white;
-            padding: 2em 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1em 1em;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav .menu {
-            display: flex;
-        }
-        nav .menu a {
-            color: #333;
-            margin: 0 1em;
-            padding: 0.5em 1em;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        nav .menu a:hover {
-            color: #00539C;
-        }
-        nav .hamburger {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5em;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .section {
-            margin: 40px 0;
-        }
-        .section h2 {
-            border-bottom: 2px solid #00539C;
-            display: inline-block;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            color: #00539C;
-        }
-        .section-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            align-items: center;
-        }
-        .section-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .section-content p, .section-content ul {
-            color: #555;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav .menu {
-                flex-direction: column;
-                display: none;
-                width: 100%;
-            }
-            nav .menu a {
-                margin: 0;
-                padding: 10px;
-                width: 100%;
-                text-align: left;
-            }
-            nav .hamburger {
-                display: block;
-            }
-            .section-content {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Makertruck Initiative</h1>
-        <p>Empowering Education Through Innovation</p>
-    </header>
-    <nav>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-        <div class="menu">
-            <a href="#about">About Us</a>
-            <a href="#projects">Projects</a>
-            <a href="#community">Community Impact</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+    <!-- Include Header -->
+    <?php include 'header.html'; ?>
+
     <div class="container">
-        <section id="about" class="section">
-            <h2>About Us</h2>
+        <section class="section">
+            <h2>Welcome to the Makertruck Initiative</h2>
             <div class="section-content">
                 <p>The Makertruck Initiative is a groundbreaking portable STEAM education platform that aims to transform the learning landscape in Aotearoa. By collaborating with partner schools during year-long residencies, we develop ambitious, high-tech, and creative engineering projects that challenge students to acquire new skills and implement them.</p>
-                <p>This initiative bridges the digital divide by providing access to cutting-edge technology and learning experiences for students who may not have had the opportunity otherwise.</p>
-                <img src="images/J34A8427.jpg" alt="About Us">
-            </div>
-        </section>
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="section-content">
-                <img src="images/DSC00252.JPG" alt="Projects">
-                <ul>
-                    <li><strong>Vertical Garden with Automation:</strong> Students design and construct a vertical garden with automated systems and interactive statistic interfaces.</li>
-                    <li><strong>Kapa Haka Costumes with Neopixel LEDs:</strong> Students create Kapa Haka costumes with coded LEDs to reflect the narrative of their performance.</li>
-                    <li><strong>Re-imagining Instruments from across the Pacific:</strong> Students design and build innovative instruments combining traditional elements with modern technology.</li>
-                    <li><strong>Motion Capture Sport Analysis Systems:</strong> Students use motion capture technology to analyze sports performances and develop performance improvement models.</li>
-                </ul>
-            </div>
-        </section>
-        <section id="community" class="section">
-            <h2>Community Impact</h2>
-            <div class="section-content">
-                <p>We foster positive community outcomes by providing a platform for students to engage with STEAM disciplines, bridging the gap between traditional education and real-world applications. Our immersive learning environment enhances problem-solving and critical-thinking skills, fostering a generation of innovative thinkers and passionate creators.</p>
-                <img src="images/community-impact.jpg" alt="Community Impact">
-            </div>
-        </section>
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-            <div class="section-content">
-                <div>
-                    <p>Email: <a href="mailto:Clark@inertiaed.org">Clark@inertiaed.org</a></p>
-                    <p>Phone: 0273033790</p>
-                    <p>Address: 123 Education Street, Knowledge City, ED 45678</p>
-                </div>
-                <img src="images/contact.jpg" alt="Contact Us">
+                <img src="images/home-intro.jpg" alt="Intro to Inertia Education">
             </div>
         </section>
     </div>
     <footer>
         <p>&copy; 2024 Makertruck Initiative. All rights reserved.</p>
     </footer>
-    <script>
-        function toggleMenu() {
-            var menu = document.querySelector('.menu');
-            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
