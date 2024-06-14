@@ -9,37 +9,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation and Banner -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="Logo" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="support.html">How to Support</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="banner">
-        <img src="images/banner.jpg" alt="Banner Image" class="img-fluid w-100">
-    </div>
-
+    <!-- Include Header -->
+    <div id="header"></div>
+    
     <div class="container">
         <section class="section">
             <h2>Welcome to the Makertruck Initiative</h2>
@@ -56,6 +28,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
+    <script>
+        $(function(){
+            $("#header").load("header.html"); 
+        });
+    </script>
 </body>
 </html>
 
